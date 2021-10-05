@@ -1,15 +1,12 @@
-//
-//  main.cpp
-//  2048
-//
-//  Created by Pranav Shridhar on 04/10/21.
-//  Copyright © 2021 ModX. All rights reserved.
-//
+#include "game.hpp"
 
-#include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    Game game;
+    
+    while (game.isRunning()) {
+        game.update();
+        game.render();
+    }
+    
     return 0;
 }
